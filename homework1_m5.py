@@ -14,7 +14,7 @@ def caching_fibonacci(): # The function returns a Fibonacci function with cachin
     
     return fibonacci
 
-def main():
+def main(): # Main function to interact with the user
     fibonacci = caching_fibonacci() # Get the Fibonacci function with caching
 
     while True:
