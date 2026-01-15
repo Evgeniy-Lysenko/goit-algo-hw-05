@@ -8,8 +8,7 @@ text = "Загальний дохід працівника складаєтьс�
 
 def generator_numbers(text: str): # generator to find numbers in text
     for number in re.findall(r"(?<=\s)\d+\.\d+(?=\s)", text): # regex to find integers and floats
-        if number: # check if the number is not empty
-            yield float(number) 
+       yield float(number) 
 
 def sum_profit(text: str, func: Callable): # function to sum numbers from generator
     total = 0
