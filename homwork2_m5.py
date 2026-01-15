@@ -1,4 +1,4 @@
-    # find all numbers (integers and floats) in the given text and calculate their sum
+# find all numbers (integers and floats) in the given text and calculate their sum
 from typing import Callable
 import re
 text = "Загальний дохід працівника складається з декількох частин: " \
