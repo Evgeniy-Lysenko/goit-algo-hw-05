@@ -37,14 +37,14 @@ def parse_log_line(line: str) -> dict: # parse a single log line
     message = parts[3] if len(parts) > 3 else "" # handle case where message may be missing
     return {"date": date, "timestamp": timestamp, "log_level": log_level, "message": message}
     
-def filter_logs_by_level(logs: list, level: str) -> list:
+def filter_logs_by_level(logs: list, level: str) -> list: # filter logs by log level
     filtered_logs = [log for log in logs if log["log_level"].upper() == level]
     return filtered_logs
     
 
-def count_logs_by_level(logs: list) -> dict:
-    log_levels = [log["log_level"] for log in logs]
-    count_level = Counter(log_levels)
+def count_logs_by_level(logs: list) -> dict: # count the number of logs by log level
+    log_levels = [log["log_level"] for log in logs] #
+    count_level = Counter(log_levels) # use Counter to count the number of logs by log level
     return count_level
    
 
@@ -69,7 +69,7 @@ def main(): # main function to handle input and exceptions
         return
     
     if len(sys.argv) > 2: # check if second argument exists
-        if sys.argv[2].upper() not in ["DEBUG", "INFO", "WARNING", "ERROR"]:
+        if level.upper() not in ["DEBUG", "INFO", "WARNING", "ERROR"]:
             print("Невірний рівень логів")
             return
           
