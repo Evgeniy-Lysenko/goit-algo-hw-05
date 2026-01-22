@@ -13,6 +13,7 @@ def input_error(func): # decorator for error handling
 
     return inner
 
+ 
 def parse_input(user_input): # parse the input
     cmd, *args = user_input.split() # split the input into command and arguments
     cmd = cmd.strip().lower() # remove leading and trailing whitespace and convert to lowercase
@@ -43,11 +44,15 @@ def all_contacts(contacts): # get all contacts
     return "\n".join(f"{name}: {phone}" for name, phone in sorted(contacts.items())) # return all sorted contacts
 
 
+
 def main():
     contacts = {}
     print("Welcome to the assistant bot!")
     while True:
         user_input = input("Enter a command: ") # get user input
+        while not user_input.strip(): # check for empty input
+            print("Please enter a command.")
+            user_input = input("Enter a command: ")
         command, args = parse_input(user_input) # parse the input
 
         if command in ["close", "exit"]: # exit commands
