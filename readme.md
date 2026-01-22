@@ -33,9 +33,10 @@
 
 ### Приклад використання
 
-python
+``` python
 fibonacci = caching_fibonacci()
 print(fibonacci(10))  # 55
+```
 
 ### Запуск програми
 
@@ -84,6 +85,7 @@ python homework1_m5.py
 
 ### Приклад використання
 
+``` python
 text = (
     "Загальний дохід працівника складається з декількох частин: "
     "1000.01 як основний дохід, "
@@ -92,6 +94,7 @@ text = (
 
 total_income = sum_profit(text, generator_numbers)
 print(f"Загальний дохід: {total_income}")
+```
 
 
 ### Результат
