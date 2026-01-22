@@ -195,9 +195,11 @@ def input_error(func):
         except IndexError:
             return "Invalid command format."
     return inner
-Кожна функція-обробник команд обгорнута цим декоратором.
 
 ```
+Кожна функція-обробник команд обгорнута цим декоратором.
+
+
 
 ### Висновок
 
