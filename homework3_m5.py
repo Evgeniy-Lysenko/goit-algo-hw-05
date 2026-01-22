@@ -20,13 +20,13 @@ def load_logs(path: str) -> list: # load logs from file
     return logs
 
 def display_log_counts(count_level: dict): # display the log counts
-    print(f"{'Рівень логування':<16} | {'Кількість':>9}")
-    print("-" * 28)
+    print(f"{'Рівень логування'} | {'Кількість'}") # print header
+    print("_" * 28)
   
     for level, count in count_level.items():
         color = Fore.LIGHTMAGENTA_EX if level == "ERROR" else ""
         reset = Style.RESET_ALL if color else ""
-        print(f"{color}{level:<16}{reset} | {count:>9}")
+        print(f"{color}{level:<16}{reset} | {count}") # print each level and count with formatting
     
 
 def parse_log_line(line: str) -> dict: # parse a single log line
