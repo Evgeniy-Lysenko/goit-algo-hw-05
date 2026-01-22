@@ -183,7 +183,7 @@ display_log_counts(counts: dict)
 
 ### Приклад декоратора
 
-''' python
+``` python
 def input_error(func):
     def inner(*args, **kwargs):
         try:
@@ -196,6 +196,8 @@ def input_error(func):
             return "Invalid command format."
     return inner
 Кожна функція-обробник команд обгорнута цим декоратором.
+
+```
 
 ### Висновок
 
