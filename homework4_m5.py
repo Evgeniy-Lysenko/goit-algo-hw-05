@@ -1,4 +1,4 @@
-# bot assistant
+# bot assistant with error handling and contact management
 
 def input_error(func): # decorator for error handling
     def inner(*args, **kwargs): # inner function to wrap the original function
