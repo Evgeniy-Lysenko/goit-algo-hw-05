@@ -49,10 +49,11 @@ def main():
     contacts = {}
     print("Welcome to the assistant bot!")
     while True:
-        user_input = input("Enter a command: ") # get user input
-        while not user_input.strip(): # check for empty input
+        user_input = input("Enter a command: ").strip() # get user input
+        if not user_input: # check for empty input
             print("Please enter a command.")
-            user_input = input("Enter a command: ")
+            continue
+
         command, args = parse_input(user_input) # parse the input
 
         if command in ["close", "exit"]: # exit commands
